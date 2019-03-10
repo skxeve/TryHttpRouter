@@ -1,0 +1,13 @@
+version: '3'
+services:
+    py3s:
+        build: .
+        container_name: 'go11c'
+        working_dir: '/go/src/github.com/skxeve/TryHttpRouter'
+        tty: true
+        volumes:
+            - .:/go/src/github.com/skxeve/TryHttpRouter
+        environment:
+            - "TZ=Asia/Tokyo"
+        ports:
+            - "8080:8080"
